@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
@@ -38,7 +39,6 @@
             this.btnSuaLHP = new System.Windows.Forms.ToolStripButton();
             this.btnThemLHP = new System.Windows.Forms.ToolStripButton();
             this.btnXoaLHP = new System.Windows.Forms.ToolStripButton();
-            this.lopHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaLHP = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.btnSuaSV = new System.Windows.Forms.ToolStripButton();
             this.btnDangKySV = new System.Windows.Forms.ToolStripButton();
             this.btnXoaSV = new System.Windows.Forms.ToolStripButton();
+            this.bdsLHP = new System.Windows.Forms.BindingSource(this.components);
+            this.lopHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLHP)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -67,6 +69,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLHP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +88,7 @@
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(197, 21);
             this.cmbMonHoc.TabIndex = 1;
+            this.cmbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cmbMonHoc_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -154,12 +158,6 @@
             this.btnXoaLHP.Size = new System.Drawing.Size(47, 22);
             this.btnXoaLHP.Text = "Xóa";
             this.btnXoaLHP.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // lopHocPhan
-            // 
-            this.lopHocPhan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lopHocPhan.HeaderText = "Tên lớp học phần";
-            this.lopHocPhan.Name = "lopHocPhan";
             // 
             // panel2
             // 
@@ -341,6 +339,13 @@
             this.btnXoaSV.Size = new System.Drawing.Size(47, 22);
             this.btnXoaSV.Text = "Xóa";
             // 
+            // lopHocPhan
+            // 
+            this.lopHocPhan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lopHocPhan.DataPropertyName = "tenLHP";
+            this.lopHocPhan.HeaderText = "Tên lớp học phần";
+            this.lopHocPhan.Name = "lopHocPhan";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLHP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,7 +383,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.DataGridView dgvLHP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lopHocPhan;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnXoaLHP;
         private System.Windows.Forms.ToolStripButton btnThemLHP;
@@ -403,6 +408,8 @@
         private System.Windows.Forms.ToolStripButton btnXoaSV;
         private System.Windows.Forms.ToolStripButton btnDangKySV;
         private System.Windows.Forms.ToolStripButton btnSuaSV;
+        private System.Windows.Forms.BindingSource bdsLHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lopHocPhan;
     }
 }
 
