@@ -63,9 +63,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemLHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemLHP.Designer.cs">
+      <DependentUpon>frmThemLHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201912221105424_QLV.cs" />
     <Compile Include="Migrations\201912221105424_QLV.designer.cs">
       <DependentUpon>201912221105424_QLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221620240_SQLV.cs" />
+    <Compile Include="Migrations\201912221620240_SQLV.designer.cs">
+      <DependentUpon>201912221620240_SQLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Entity\LHP.cs" />
@@ -74,11 +84,32 @@
     <Compile Include="Model\SLSVContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmSuaLHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaLHP.Designer.cs">
+      <DependentUpon>frmSuaLHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXoaLHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXoaLHP.Designer.cs">
+      <DependentUpon>frmXoaLHP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThemLHP.resx">
+      <DependentUpon>frmThemLHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXoaLHP.resx">
+      <DependentUpon>frmXoaLHP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912221105424_QLV.resx">
       <DependentUpon>201912221105424_QLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221620240_SQLV.resx">
+      <DependentUpon>201912221620240_SQLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmSuaLHP.resx">
+      <DependentUpon>frmSuaLHP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

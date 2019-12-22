@@ -13,9 +13,9 @@ namespace QuanLySinhVien.Model.Entity
         [Key, Column(Order = 0)]
         public string idSV { get; set; }
 
-        public string idLHP { get; set; }
-        [Key, Column(Order = 1)]
+        //[Key, Column(Order = 1)]
         //[ForeignKey("idLHP")]
+        public string idLHP { get; set; }
         public string hoDem { get; set; }
         public string ten { get; set; }
         public DateTime ngaySinh { get; set; }

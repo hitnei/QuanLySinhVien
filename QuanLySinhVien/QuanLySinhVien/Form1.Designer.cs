@@ -56,13 +56,13 @@
             this.btnXoaSV = new System.Windows.Forms.ToolStripButton();
             this.btnDangKySV = new System.Windows.Forms.ToolStripButton();
             this.btnSuaSV = new System.Windows.Forms.ToolStripButton();
-            this.bdsLHP = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
             this.maSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoDem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.queQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsLHP = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLHP)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -111,6 +111,7 @@
             this.dgvLHP.Name = "dgvLHP";
             this.dgvLHP.Size = new System.Drawing.Size(295, 485);
             this.dgvLHP.TabIndex = 0;
+            this.dgvLHP.CellBorderStyleChanged += new System.EventHandler(this.dgvLHP_CellBorderStyleChanged);
             this.dgvLHP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLHP_CellContentClick);
             // 
             // lopHocPhan
@@ -149,7 +150,7 @@
             this.btnXoaLHP.Name = "btnXoaLHP";
             this.btnXoaLHP.Size = new System.Drawing.Size(47, 22);
             this.btnXoaLHP.Text = "Xóa";
-            this.btnXoaLHP.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.btnXoaLHP.Click += new System.EventHandler(this.btnXoaLHP_Click);
             // 
             // btnThemLHP
             // 
@@ -159,6 +160,7 @@
             this.btnThemLHP.Name = "btnThemLHP";
             this.btnThemLHP.Size = new System.Drawing.Size(57, 22);
             this.btnThemLHP.Text = "Thêm";
+            this.btnThemLHP.Click += new System.EventHandler(this.btnThemLHP_Click);
             // 
             // btnSuaLHP
             // 
@@ -168,6 +170,7 @@
             this.btnSuaLHP.Name = "btnSuaLHP";
             this.btnSuaLHP.Size = new System.Drawing.Size(46, 22);
             this.btnSuaLHP.Text = "Sửa";
+            this.btnSuaLHP.Click += new System.EventHandler(this.btnSuaLHP_Click);
             // 
             // panel2
             // 
@@ -368,6 +371,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLHP)).EndInit();
