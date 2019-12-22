@@ -16,5 +16,20 @@ namespace QuanLySinhVien
         {
             InitializeComponent();
         }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
