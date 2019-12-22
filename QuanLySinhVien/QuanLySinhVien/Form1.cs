@@ -16,10 +16,12 @@ namespace QuanLySinhVien
     {
         List<MH> lstMH;
         List<LHP> lstLHP;
+        List<SV> lstSV;
         public Form1()
         {
             InitializeComponent();
             dgvLHP.AutoGenerateColumns = false;
+            dgvSV.AutoGenerateColumns = false;
             lstMH = MH.getMH();
             for (int i=0; i<lstMH.Count(); i++)
             {
@@ -47,6 +49,26 @@ namespace QuanLySinhVien
             lstLHP = LHP.getLHP(lstMH.ElementAt(cmbMonHoc.SelectedIndex).idMH);
             bdsLHP.DataSource = lstLHP;
             dgvLHP.DataSource = bdsLHP;
+        }
+
+        private void dgvLHP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexLHP = dgvLHP.CurrentRow.Index;
+            lstSV = SV.getSV(lstLHP.ElementAt(indexLHP).idLHP);
+            LHP lopHocPhan = lstLHP.ElementAt(indexLHP);
+
+            bdsSV.DataSource = lstSV;
+            dgvSV.DataSource = bdsSV;
+
+            txtDinhMucSinhVien.Text = lopHocPhan.DinhMucSinhVien;
+            txtGiaoVienPhuTrach.Text = lopHocPhan.GiaoVienPhuTrach;
+            txtMaLHP.Text = lopHocPhan.idLHP;
+            txtSoLuongSV.Text = lopHocPhan.SoLuongSinhVien;
+        }
+
+        private void dgvSV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

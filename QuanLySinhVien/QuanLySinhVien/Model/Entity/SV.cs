@@ -20,5 +20,12 @@ namespace QuanLySinhVien.Model.Entity
         public string ten { get; set; }
         public DateTime ngaySinh { get; set; }
         public string queQuan { get; set; }
+        public static List<SV> getSV(string maLHP)
+        {
+            //Console.WriteLine(maLHP);
+            var db = new SLSVContext();
+            List<SV> lst = db.SVDbContext.Where(e => e.idLHP.Equals(maLHP)).ToList();
+            return lst;
+        }
     }
 }
